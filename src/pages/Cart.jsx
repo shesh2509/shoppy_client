@@ -240,7 +240,7 @@ async function displayRazorpay() {
         }
 
         // creating a new order
-        const result = await axios.post("https://backendapi-chvp.onrender.com/payment/orders");
+        const result = await axios.post("https://backendapi-chvp.onrender.com/payment/orders", {total: total});
 
         if (!result) {
             alert("Server error. Are you online?");
