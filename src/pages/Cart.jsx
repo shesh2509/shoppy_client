@@ -176,6 +176,7 @@ const Cart = () => {
 
   const cart = useSelector((state) => state.cart); 
   const quantity = useSelector((state) => state.cart.quantity);
+  const total = useSelector((state) => state.cart.total);
 
     const dispatch = useDispatch();
 
@@ -247,11 +248,11 @@ async function displayRazorpay() {
         }
 
         // Getting the order details back
-        const { amount, id: order_id, currency } = result.data;
+        const { id: order_id, currency } = result.data;
 
         const options = {
             key: "rzp_test_TPGCgE9IVZu4oL", // Enter the Key ID generated from the Dashboard
-            amount: amount.toString(),
+            amount: total.toString(),
             currency: currency,
             name: "Shoppy",
             description: "Test Transaction",
