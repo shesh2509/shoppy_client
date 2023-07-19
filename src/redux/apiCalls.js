@@ -8,6 +8,7 @@ import {
     deleteProductStart,
     deleteProductSuccess,
     deleteProductFailure,
+    deleteAll,
 } from "./cartRedux"
 import { publicRequest, userRequest } from "../requestMethods"
 
@@ -45,6 +46,7 @@ export const addOrders = (orders) => async dispatch => {
 
 export const logoutUser = (dispatch) => {
     dispatch(logout());
+    dispatch(deleteAll());
 }
 
 
