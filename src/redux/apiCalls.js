@@ -49,6 +49,9 @@ export const logoutUser = (dispatch) => {
     dispatch(deleteAll());
 }
 
+export const clearCart = (dispatch) => {
+    dispatch(deleteAll());
+}
 
 export const deleteProduct = async (id, dispatch) => {
     dispatch(deleteProductStart());
