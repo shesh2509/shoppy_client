@@ -1,6 +1,6 @@
 //import { Add, Remove } from "@material-ui/icons";
 //import { Delete } from "@material-ui/icons";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -176,6 +176,8 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart); 
   const quantity = useSelector((state) => state.cart.quantity);
 
+    const dispatch = useDispatch();
+
   /* const dispatch = useDispatch()
 
   const {currentUser} = useSelector((state) => state.user);
@@ -284,6 +286,7 @@ async function displayRazorpay() {
 
         const paymentObject = new window.Razorpay(options);
         paymentObject.open();
+   dispatch(clearCart);
 }
 
   return (
