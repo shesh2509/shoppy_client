@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 import {Link} from "react-router-dom";
+import { clearCart } from "../redux/apiCalls";
 //import {addOrders} from "../redux/apiCalls";
 //import {deleteProduct } from "../redux/apiCalls";
 //import { publicRequest } from "../requestMethods";
