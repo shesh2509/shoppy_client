@@ -27,6 +27,9 @@
             state.isFetching = false;
             state.error = true;
         },
+        deleteAll : (state) => {
+            state.products = [];
+        },
     }
  })
 
@@ -36,5 +39,6 @@
     deleteProductStart,
     deleteProductSuccess,
     deleteProductFailure,
+    deleteAll,
 } = cartSlice.actions
  export default cartSlice.reducer
