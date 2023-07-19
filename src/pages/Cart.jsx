@@ -267,10 +267,9 @@ async function displayRazorpay() {
                 console.log(data)
 
                 const result = await axios.post("https://backendapi-chvp.onrender.com/payment/success", data);
-
+                dispatch(clearCart);
                 alert(result.data.msg);
-              dispatch(clearCart);
-
+              
 
             },
             prefill: {
